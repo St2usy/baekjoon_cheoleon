@@ -11,4 +11,3 @@ else :
                     break
                 n = n/i
                 print(i)
-        

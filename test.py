@@ -1,15 +1,13 @@
-# board = [input().strip() for i in range(3)]
-# print(board)
-# print(board[1][1]) 
+def find_missing_points(sqr) :
+    xs = [x[0] for x in sqr]
+    ys = [y[1] for y in sqr]
 
-## 문자열은 그 자체로 리스트이다.
-## list(map(int, input().split()))
-## list(input().split()), list(input())
-
-sample = list(input())
-print(sample)
-sample2 = input()
-print(sample2)
-
-## 브루트 포스는 컴퓨터를 계산기, 기계처럼 보는 시각을 가져야한다.
-## 내 목적, 의도대로 코드를 작성하지만, 노가다는 컴퓨터가한다.
+    for x in xs :
+        if xs.count(x) == 1:
+            missing_x = x
+    for y in ys :
+        if ys.count(y) == 1:
+            missing_y = y
+    return (missing_x, missing_y)
+points = [(1, 2), (1, 5), (4, 2)]
+print(find_missing_points(points)) 
